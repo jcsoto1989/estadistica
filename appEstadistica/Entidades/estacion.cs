@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace appEstadistica.Entidades
 {
-    class estacion
+    public class estacion
     {
         [ServiceStack.DataAnnotations.AutoIncrement]
         public int idEstacion { get; set; }

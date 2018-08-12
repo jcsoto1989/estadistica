@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using appEstadistica.Entidades;
 
 namespace appEstadistica.DAL
 {
@@ -19,25 +20,26 @@ namespace appEstadistica.DAL
             _conexion = new OrmLiteConnectionFactory(DB.Default.conexion, SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-       /* public int InsertarComanda(Comanda comanda)
+
+        public List<dato> datos(int idEstacion)
         {
-            _db.Insert<Comanda>(comanda);
-            return _db.Select<Comanda>().Last().IdComanda;
+            return _db.Select<dato>(a => a.idEstacion==idEstacion);
         }
 
-        public List<Comanda> ListaComandas(int idMesa)
+        public dato getDato(decimal valor)
         {
-            return _db.Select<Comanda>(a => a.IdMesa == idMesa && a.IdEstadoComanda != 5);
+            return _db.Select<dato>(a => a.valor== valor).LastOrDefault();
         }
 
-        public void ActualizarComanda(Comanda comanda)
+        public void updateDatos(List<dato> datos)
         {
-            _db.Update<Comanda>(comanda);
+            foreach (dato item in datos)
+            {
+                if (item.idDato != 0)
+                    _db.Update<dato>(item);
+                else
+                    _db.Insert<dato>(item);
+            }
         }
-
-        public Comanda BuscarComandaDAL(int idComanda)
-        {
-            return _db.Select<Comanda>(a => a.IdComanda == idComanda).LastOrDefault();
-        }*/
     }
 }

@@ -1,1 +1,20 @@
 c:\users\user1\documents\visual studio 2015\Projects\appEstadistica\appEstadistica\bin\Debug\appEstadistica.exe.config
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\appEstadistica.exe.config
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\appEstadistica.exe
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\appEstadistica.pdb
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Common.dll
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.OrmLite.dll
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Text.dll
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Common.xml
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Interfaces.xml
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.OrmLite.xml
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.OrmLite.SqlServer.xml
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\bin\Debug\ServiceStack.Text.xml
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.csprojResolveAssemblyReference.cache
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.Properties.Resources.resources
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.UI.frmPrincipal.resources
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.csproj.GenerateResource.Cache
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.exe
+C:\Users\Kathy Alfaro\Desktop\appEstadistica\appEstadistica\obj\Debug\appEstadistica.pdb

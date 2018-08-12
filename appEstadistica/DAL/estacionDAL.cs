@@ -5,12 +5,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using appEstadistica.Entidades;
 
 namespace appEstadistica.DAL
 {
     public class estacionDAL
     {
-   {
         private OrmLiteConnectionFactory _conexion;
         private IDbConnection _db;
 
@@ -19,25 +19,14 @@ namespace appEstadistica.DAL
             _conexion = new OrmLiteConnectionFactory(DB.Default.conexion, SqlServerDialect.Provider);
             _db = _conexion.Open();
         }
-        /* public int InsertarComanda(Comanda comanda)
-         {
-             _db.Insert<Comanda>(comanda);
-             return _db.Select<Comanda>().Last().IdComanda;
-         }
 
-         public List<Comanda> ListaComandas(int idMesa)
-         {
-             return _db.Select<Comanda>(a => a.IdMesa == idMesa && a.IdEstadoComanda != 5);
-         }
-
-         public void ActualizarComanda(Comanda comanda)
-         {
-             _db.Update<Comanda>(comanda);
-         }
-
-         public Comanda BuscarComandaDAL(int idComanda)
-         {
-             return _db.Select<Comanda>(a => a.IdComanda == idComanda).LastOrDefault();
-         }*/
+        public estacion getEstacion(int id)
+        {
+            return _db.Select<estacion>(a => a.idEstacion== id).LastOrDefault();
+        }
+        public void updateEstacion(estacion oEstacion)
+        {
+            _db.Update<estacion>(oEstacion);
+        }
     }
 }

@@ -75,6 +75,11 @@
       <DependentUpon>DB.settings</DependentUpon>
     </Compile>
     <Compile Include="DAL\estacionDAL.cs" />
+    <Compile Include="dsValor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsValor.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\dato.cs" />
     <Compile Include="Entidades\estacion.cs" />
     <Compile Include="Program.cs" />
@@ -100,6 +105,17 @@
     <None Include="DAL\DB.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>DB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsValor.xsc">
+      <DependentUpon>dsValor.xsd</DependentUpon>
+    </None>
+    <None Include="dsValor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsValor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsValor.xss">
+      <DependentUpon>dsValor.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
