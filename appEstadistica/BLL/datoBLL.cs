@@ -12,7 +12,22 @@ namespace appEstadistica.BLL
     {
         private datoDAL oDatoDAL=new datoDAL();
         private estacionBLL oEstacionBLL = new estacionBLL();
-        public void calcular(dato oDato)
+        public void deleleDato(dato oDato)
+        {
+            oDatoDAL.deleteDato(oDato.idDato);
+            List<dato> datos = oDatoDAL.datos(oDato.idEstacion);
+            calcular(oDato.idEstacion, datos);
+        }
+
+        public void updateDato(dato oDato)
+        {
+            List<dato> datos = oDatoDAL.datos(oDato.idEstacion);
+            datos.Single<dato>(a => a.idDato== oDato.idDato).frecuencia=oDato.frecuencia;
+            datos.Single<dato>(a => a.idDato == oDato.idDato).valor = oDato.valor;
+            calcular(oDato.idEstacion, datos);
+        }
+
+        public void addDato(dato oDato)
         {
             List<dato> datos = oDatoDAL.datos(oDato.idEstacion);
             if (datos.Count<dato>(a => a.valor == oDato.valor)>0)
@@ -22,10 +37,14 @@ namespace appEstadistica.BLL
                 oDato.frecuencia = 1;
                 datos.Add(oDato);
             }
-            
-            estacion oEstacion = oEstacionBLL.getEstacion(oDato.idEstacion);
+            calcular(oDato.idEstacion, datos);
+        }
+
+        private void calcular(int idEstacion, List<dato> datos)
+        {
+            estacion oEstacion = oEstacionBLL.getEstacion(idEstacion);
             oEstacion.media = 0;
-            decimal total=datos.Sum(a=> a.frecuencia);
+            decimal total = datos.Sum(a => a.frecuencia);
             foreach (dato dato in datos)
             {
                 dato.probabilidad = dato.frecuencia / total;
@@ -35,12 +54,13 @@ namespace appEstadistica.BLL
             oEstacion.varianza = 0;
             foreach (dato dato in datos)
             {
-                dato.xuPx = Convert.ToDecimal(Math.Pow(Decimal.ToDouble(dato.valor - oEstacion.media),2)) * dato.xPx;
-                oEstacion.varianza+=dato.xuPx;
+                dato.xuPx = Convert.ToDecimal(Math.Pow(Decimal.ToDouble(dato.valor - oEstacion.media), 2)) * dato.probabilidad;
+                oEstacion.varianza += dato.xuPx;
             }
             oEstacion.desviacion = Convert.ToDecimal(Math.Sqrt(Decimal.ToDouble(oEstacion.varianza)));
+            oEstacion.zetaUno = (decimal)-1.28*oEstacion.desviacion+oEstacion.media;
+            oEstacion.zetaDos = (decimal)1.28 * oEstacion.desviacion + oEstacion.media;
             oEstacionBLL.updateEstacion(oEstacion);
-            //faltan zetas
             oDatoDAL.updateDatos(datos);
         }
     }

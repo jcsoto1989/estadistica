@@ -21,6 +21,11 @@ namespace appEstadistica.DAL
             _db = _conexion.Open();
         }
 
+        public void deleteDato(int idDato)
+        {
+            _db.Delete<dato>(a => a.idDato == idDato);
+        }
+
         public List<dato> datos(int idEstacion)
         {
             return _db.Select<dato>(a => a.idEstacion==idEstacion);

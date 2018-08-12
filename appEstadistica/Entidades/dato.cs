@@ -12,12 +12,10 @@ namespace appEstadistica.Entidades
         public int idDato { get; set; }
         public int idEstacion { get; set; }
         public Decimal valor { get; set; }
-        public Decimal frecuencia { get; set; }
+        public int frecuencia { get; set; }
         public Decimal probabilidad { get; set; }
         public Decimal xPx { get; set; }
         public Decimal xuPx { get; set; }
-
-
 
     }
 }
