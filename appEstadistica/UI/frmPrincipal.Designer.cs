@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAnadir1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,13 +45,30 @@
             this.lblZetaUno1 = new System.Windows.Forms.Label();
             this.lblZetaDos1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEstacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.frecuenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.probabilidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xPxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xuPxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSave1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnBorrar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dato1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsValor = new appEstadistica.dsValor();
             this.nudValor1 = new System.Windows.Forms.NumericUpDown();
             this.nudValor2 = new System.Windows.Forms.NumericUpDown();
             this.dgvEstacion2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dato2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblZetaDos2 = new System.Windows.Forms.Label();
             this.lblZetaUno2 = new System.Windows.Forms.Label();
             this.lblDesviacion2 = new System.Windows.Forms.Label();
@@ -63,31 +80,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnAnadir2 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dato1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dsValor = new appEstadistica.dsValor();
-            this.idDatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idEstacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.frecuenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.probabilidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xPxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xuPxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dato1TableAdapter = new appEstadistica.dsValorTableAdapters.dato1TableAdapter();
-            this.dato2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dato2TableAdapter = new appEstadistica.dsValorTableAdapters.dato2TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dato1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstacion2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dato1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dato2BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,7 +136,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 17);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Z1:";
+            this.label4.Text = "X1:";
             // 
             // label5
             // 
@@ -145,7 +145,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 17);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Z2:";
+            this.label5.Text = "X2:";
             // 
             // lblMedia1
             // 
@@ -216,15 +216,63 @@
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // idDatoDataGridViewTextBoxColumn
+            // 
+            this.idDatoDataGridViewTextBoxColumn.DataPropertyName = "idDato";
+            this.idDatoDataGridViewTextBoxColumn.HeaderText = "idDato";
+            this.idDatoDataGridViewTextBoxColumn.Name = "idDatoDataGridViewTextBoxColumn";
+            this.idDatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDatoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idEstacionDataGridViewTextBoxColumn
+            // 
+            this.idEstacionDataGridViewTextBoxColumn.DataPropertyName = "idEstacion";
+            this.idEstacionDataGridViewTextBoxColumn.HeaderText = "idEstacion";
+            this.idEstacionDataGridViewTextBoxColumn.Name = "idEstacionDataGridViewTextBoxColumn";
+            this.idEstacionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // valorDataGridViewTextBoxColumn
+            // 
+            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
+            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
+            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
+            // 
+            // frecuenciaDataGridViewTextBoxColumn
+            // 
+            this.frecuenciaDataGridViewTextBoxColumn.DataPropertyName = "frecuencia";
+            this.frecuenciaDataGridViewTextBoxColumn.HeaderText = "Frecuencia absoluta";
+            this.frecuenciaDataGridViewTextBoxColumn.Name = "frecuenciaDataGridViewTextBoxColumn";
+            // 
+            // probabilidadDataGridViewTextBoxColumn
+            // 
+            this.probabilidadDataGridViewTextBoxColumn.DataPropertyName = "probabilidad";
+            this.probabilidadDataGridViewTextBoxColumn.HeaderText = "Probabilidad";
+            this.probabilidadDataGridViewTextBoxColumn.Name = "probabilidadDataGridViewTextBoxColumn";
+            this.probabilidadDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // xPxDataGridViewTextBoxColumn
+            // 
+            this.xPxDataGridViewTextBoxColumn.DataPropertyName = "xPx";
+            this.xPxDataGridViewTextBoxColumn.HeaderText = "xP(x)";
+            this.xPxDataGridViewTextBoxColumn.Name = "xPxDataGridViewTextBoxColumn";
+            this.xPxDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // xuPxDataGridViewTextBoxColumn
+            // 
+            this.xuPxDataGridViewTextBoxColumn.DataPropertyName = "xuPx";
+            this.xuPxDataGridViewTextBoxColumn.HeaderText = "((x-u)^2)P(x)";
+            this.xuPxDataGridViewTextBoxColumn.Name = "xuPxDataGridViewTextBoxColumn";
+            this.xuPxDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // btnSave1
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.btnSave1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnSave1.DefaultCellStyle = dataGridViewCellStyle1;
             this.btnSave1.HeaderText = "Guardar";
             this.btnSave1.Name = "btnSave1";
             this.btnSave1.Text = "Guardar";
@@ -232,17 +280,27 @@
             // 
             // btnBorrar
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.btnBorrar.DefaultCellStyle = dataGridViewCellStyle2;
             this.btnBorrar.HeaderText = "Borrar";
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseColumnTextForButtonValue = true;
+            // 
+            // dato1BindingSource
+            // 
+            this.dato1BindingSource.DataMember = "dato1";
+            this.dato1BindingSource.DataSource = this.dsValor;
+            // 
+            // dsValor
+            // 
+            this.dsValor.DataSetName = "dsValor";
+            this.dsValor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nudValor1
             // 
@@ -294,15 +352,63 @@
             this.dgvEstacion2.TabIndex = 25;
             this.dgvEstacion2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstacion2_CellContentClick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDato";
+            this.dataGridViewTextBoxColumn1.HeaderText = "idDato";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "idEstacion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "idEstacion";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "valor";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Valor";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "frecuencia";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Frecuencia absoluta";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "probabilidad";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Probabilidad";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "xPx";
+            this.dataGridViewTextBoxColumn6.HeaderText = "xP(x)";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "xuPx";
+            this.dataGridViewTextBoxColumn7.HeaderText = "((x-u)^2)P(x)";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
             // dataGridViewButtonColumn1
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewButtonColumn1.HeaderText = "Guardar";
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
             this.dataGridViewButtonColumn1.Text = "Guardar";
@@ -310,17 +416,22 @@
             // 
             // dataGridViewButtonColumn2
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewButtonColumn2.HeaderText = "Borrar";
             this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
             this.dataGridViewButtonColumn2.Text = "Borrar";
             this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            // 
+            // dato2BindingSource
+            // 
+            this.dato2BindingSource.DataMember = "dato2";
+            this.dato2BindingSource.DataSource = this.dsValor;
             // 
             // lblZetaDos2
             // 
@@ -374,7 +485,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(29, 17);
             this.label11.TabIndex = 19;
-            this.label11.Text = "Z2:";
+            this.label11.Text = "X2:";
             // 
             // label12
             // 
@@ -383,7 +494,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 17);
             this.label12.TabIndex = 18;
-            this.label12.Text = "Z1:";
+            this.label12.Text = "X1:";
             // 
             // label13
             // 
@@ -423,120 +534,9 @@
             this.btnAnadir2.UseVisualStyleBackColor = true;
             this.btnAnadir2.Click += new System.EventHandler(this.btnAnadir2_Click);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "idDato";
-            this.dataGridViewTextBoxColumn1.HeaderText = "idDato";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "idEstacion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "idEstacion";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "valor";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "frecuencia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Frecuencia absoluta";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "probabilidad";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Probabilidad";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "xPx";
-            this.dataGridViewTextBoxColumn6.HeaderText = "xP(x)";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "xuPx";
-            this.dataGridViewTextBoxColumn7.HeaderText = "((x-u)^2)P(x)";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dato1BindingSource
-            // 
-            this.dato1BindingSource.DataMember = "dato1";
-            this.dato1BindingSource.DataSource = this.dsValor;
-            // 
-            // dsValor
-            // 
-            this.dsValor.DataSetName = "dsValor";
-            this.dsValor.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idDatoDataGridViewTextBoxColumn
-            // 
-            this.idDatoDataGridViewTextBoxColumn.DataPropertyName = "idDato";
-            this.idDatoDataGridViewTextBoxColumn.HeaderText = "idDato";
-            this.idDatoDataGridViewTextBoxColumn.Name = "idDatoDataGridViewTextBoxColumn";
-            this.idDatoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDatoDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // idEstacionDataGridViewTextBoxColumn
-            // 
-            this.idEstacionDataGridViewTextBoxColumn.DataPropertyName = "idEstacion";
-            this.idEstacionDataGridViewTextBoxColumn.HeaderText = "idEstacion";
-            this.idEstacionDataGridViewTextBoxColumn.Name = "idEstacionDataGridViewTextBoxColumn";
-            this.idEstacionDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // valorDataGridViewTextBoxColumn
-            // 
-            this.valorDataGridViewTextBoxColumn.DataPropertyName = "valor";
-            this.valorDataGridViewTextBoxColumn.HeaderText = "Valor";
-            this.valorDataGridViewTextBoxColumn.Name = "valorDataGridViewTextBoxColumn";
-            // 
-            // frecuenciaDataGridViewTextBoxColumn
-            // 
-            this.frecuenciaDataGridViewTextBoxColumn.DataPropertyName = "frecuencia";
-            this.frecuenciaDataGridViewTextBoxColumn.HeaderText = "Frecuencia absoluta";
-            this.frecuenciaDataGridViewTextBoxColumn.Name = "frecuenciaDataGridViewTextBoxColumn";
-            // 
-            // probabilidadDataGridViewTextBoxColumn
-            // 
-            this.probabilidadDataGridViewTextBoxColumn.DataPropertyName = "probabilidad";
-            this.probabilidadDataGridViewTextBoxColumn.HeaderText = "Probabilidad";
-            this.probabilidadDataGridViewTextBoxColumn.Name = "probabilidadDataGridViewTextBoxColumn";
-            this.probabilidadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // xPxDataGridViewTextBoxColumn
-            // 
-            this.xPxDataGridViewTextBoxColumn.DataPropertyName = "xPx";
-            this.xPxDataGridViewTextBoxColumn.HeaderText = "xP(x)";
-            this.xPxDataGridViewTextBoxColumn.Name = "xPxDataGridViewTextBoxColumn";
-            this.xPxDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // xuPxDataGridViewTextBoxColumn
-            // 
-            this.xuPxDataGridViewTextBoxColumn.DataPropertyName = "xuPx";
-            this.xuPxDataGridViewTextBoxColumn.HeaderText = "((x-u)^2)P(x)";
-            this.xuPxDataGridViewTextBoxColumn.Name = "xuPxDataGridViewTextBoxColumn";
-            this.xuPxDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // dato1TableAdapter
             // 
             this.dato1TableAdapter.ClearBeforeFill = true;
-            // 
-            // dato2BindingSource
-            // 
-            this.dato2BindingSource.DataMember = "dato2";
-            this.dato2BindingSource.DataSource = this.dsValor;
             // 
             // dato2TableAdapter
             // 
@@ -578,11 +578,11 @@
             this.Text = "Estaciones";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dato1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstacion2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dato1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dato2BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
